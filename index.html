@@ -1,0 +1,103 @@
+<html>
+<head>
+ <title>Converte Robux</title>
+ <style>
+ body {
+ background-color: #5865F2;
+ color: white;
+ font-family: Arial, sans-serif;
+ }
+
+ h1 {
+ font-size: 36px;
+ margin-bottom: 20px;
+ }
+
+ input[type=number] {
+ width: 100%;
+ padding: 12px 20px;
+ margin: 8px 0;
+ display: inline-block;
+ border: 1px solid #ccc;
+ box-sizing: border-box;
+ }
+
+ #result {
+ margin-top: 20px;
+ font-size: 24px;
+ }
+
+ button[type=button] {
+ background-color: #4CAF50;
+ color: white;
+ padding: 15px 32px;
+ border: none;
+ cursor: pointer;
+ border-radius: 5px;
+ font-size: 20px;
+ }
+
+ button[type=button]:hover {
+ background-color: #3e8e41;
+ }
+
+.sidebar-container {
+ float: right;
+ width: 35%;
+ padding: 10px;
+ background-color: #444;
+ border-radius: 10px;
+ }
+
+.sidebar {
+ padding: 20px;
+ background-color: #444;
+ border-radius: 10px;
+ }
+
+.sidebar h2 {
+ margin-top: 0;
+ }
+
+.sidebar p {
+ font-size: 18px;
+ }
+ </style>
+</head>
+<body>
+ <h1>Calcular Robux</h1>
+ <h2>Apenas Robux normal e o resultado sai em pendentes!</h2>
+ <div class="input-group">
+ <input type="number" id="robux" name="robux" min="1">
+ <button type="button" id="calculate">Calcular</button>
+ </div>
+ <p id="result"></p>
+
+ <div class="sidebar-container">
+    <div class="sidebar">
+    <h1>Já pensou nisso?</h1>
+    </div>
+  <div class="sidebar">
+   <h2>Avatar CashBack in game</h2>
+   <p role="text">40% de CashBack em compras de Avatar</p>
+  </div>
+  <div class="sidebar">
+   <h2>Gamepass CashBack in game</h2>
+   <p role="text">10% - 40% de CashBack em compras de Gamepass</p>
+  </div>
+  <div class="sidebar">
+   <h2>Robux Pendentes</h2>
+   <p role="text">70% de robux em Gamepass ou Avatar</p>
+   <p role="text">Os Robux pendentes não são incluídos no seu total até o lançamento, o que pode demorar alguns dias</p>
+  </div>
+ </div>
+ <p style="position: fixed; bottom: 1; left: 1;">Criador: Itz_Mart</p>
+ <script>
+    document.getElementById("calculate").addEventListener("click", function() {
+     var robux = document.getElementById("robux").value;
+     var converted = robux * 0.7;
+     document.getElementById("result").innerHTML = "Você recebe <strong>" + converted.toFixed(0) + " Robux</strong>!";
+    });
+   </script>
+</body>
+</html>
